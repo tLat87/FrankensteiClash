@@ -1,97 +1,233 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Frankenstein Brain Clash
 
-# Getting Started
+A fast-paced party game where knowledge and quick thinking determine which Frankenstein survives the ultimate brain clash!
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## 🎮 Game Description
 
-## Step 1: Start Metro
+**Frankenstein Brain Clash** - Step into the electrified arena where only the smartest Frankensteins survive. A fast-paced party game for 3–6 players, perfect for friends, family, and late-night challenges.
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+### How it Works
+- Choose your category and difficulty
+- Each player has seconds to give the right answer
+- Fail, repeat, or stay silent – and your Frankenstein falls apart piece by piece
+- The last Frankenstein standing claims the top score
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+### Features
+- 4 onboarding screens to guide new players
+- Unique randomized Frankenstein avatars for each player
+- Flexible settings: 3–6 players, Easy / Medium / Hard categories, timer 5–15 sec
+- Scoring system and persistent leaderboard
+- Simple, fun rules – but only one true winner
 
-```sh
-# Using npm
-npm start
+**Can you keep your Frankenstein alive and climb to the top? Download now and join the Brain Clash!**
 
-# OR using Yarn
-yarn start
+## 🖼️ Background Image Setup
+
+**IMPORTANT**: You need to add your own background image to make the app work properly.
+
+### Quick Setup
+1. **Add your image**: Place your background image in `src/assets/img/` directory
+2. **Update the path**: In `src/components/BackgroundImage.tsx`, change the filename in the require statement
+3. **Recommended format**: PNG or JPG, 1080x1920 or similar mobile aspect ratio
+
+### Example
+```typescript
+// In src/components/BackgroundImage.tsx
+source={require('../assets/img/yourImage.png')} // Replace 'yourImage.png' with your filename
 ```
 
-## Step 2: Build and run your app
+### Current Status
+- ✅ All screens created and functional
+- ✅ BackgroundImage component integrated in all screens
+- ⚠️ **Background image placeholder needs to be replaced with your actual image**
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+## 🚀 Getting Started
 
-### Android
+### Prerequisites
+- Node.js (v16 or higher)
+- React Native CLI
+- iOS Simulator (for iOS development)
+- Android Studio (for Android development)
 
-```sh
-# Using npm
-npm run android
+### Installation
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. **Add your background image** (see instructions above)
+4. Run the app:
+   ```bash
+   # iOS
+   npx react-native run-ios
+   
+   # Android
+   npx react-native run-android
+   ```
 
-# OR using Yarn
-yarn android
+## 📱 Screens
+
+### 1. Onboarding (4 screens)
+- Welcome introduction
+- Game mechanics explanation
+- Player setup guidance
+- Ready to play
+
+### 2. Main Menu
+- Game start button
+- Rules access
+- Settings access
+- Game information
+
+### 3. Rules
+- Comprehensive game rules
+- How to play instructions
+- Scoring system explanation
+
+### 4. Game Setup
+- Player count selection (3-6)
+- Difficulty level (Easy/Medium/Hard)
+- Timer settings (5/10/15 seconds)
+
+### 5. Player Setup
+- Individual player name input
+- Random Frankenstein avatar assignment
+- Progress tracking
+
+### 6. Gameplay
+- Active game screen
+- Timer countdown
+- Word input and validation
+- Player turn management
+- Frankenstein avatar damage visualization
+
+### 7. Leaderboard
+- Final game results
+- Player rankings
+- Game statistics
+- Achievement display
+
+### 8. Settings
+- Game preferences (music, vibration)
+- Data management
+- Game information
+- Statistics display
+
+## 🎨 Design System
+
+### Colors
+- **Primary**: Dark blue theme
+- **Secondary**: Complementary colors
+- **Accent**: Highlight elements
+- **Lightning**: Special effects
+- **Gold/Silver/Bronze**: Achievement colors
+
+### Typography
+- **Title**: Large, bold headers
+- **Subtitle**: Medium, semi-bold
+- **Body**: Regular text
+- **Button**: Action text
+- **Caption**: Small, secondary text
+
+## 🎯 Game Categories
+
+### Easy
+- Animals
+- Colors
+- Food & Drinks
+- Basic Objects
+
+### Medium
+- Capital Cities
+- Movies
+- Sports
+- Famous People
+
+### Hard
+- Science
+- Literature
+- Inventions
+- Historical Events
+
+## 🔧 Technical Features
+
+- **React Native**: Cross-platform mobile development
+- **TypeScript**: Type-safe JavaScript
+- **React Navigation**: Screen navigation management
+- **Redux Toolkit**: State management
+- **Redux Persist**: Data persistence
+- **Animated API**: Smooth animations
+- **Responsive Design**: Adapts to different screen sizes
+
+## 🎮 Game Mechanics
+
+### Core Loop
+1. Player selects category and difficulty
+2. Timer starts for current player
+3. Player must name a word from the category
+4. Success: +100 points, next player
+5. Failure: -1 life, Frankenstein loses body part
+6. Game continues until one player remains
+
+### Scoring System
+- **Correct answer**: +100 points
+- **Bonus points**: Quick responses
+- **Penalty**: Repeated words
+- **Life bonus**: Points for remaining lives
+
+### Avatar Damage System
+- **3 lives**: Full Frankenstein
+- **2 lives**: Missing arm/leg
+- **1 life**: Multiple missing parts
+- **0 lives**: Eliminated
+
+## 📱 Screen Flow
+
+```
+Onboarding → Main Menu → Game Setup → Player Setup → Gameplay → Leaderboard
+     ↓              ↓           ↓           ↓           ↓           ↓
+   Skip/Next    Start Game   Configure   Enter Names  Play Game  Play Again
+                                                      ↓
+                                                 Main Menu
 ```
 
-### iOS
+## 🚧 Future Enhancements
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+- [ ] Sound effects and background music
+- [ ] More game categories
+- [ ] Multiplayer online support
+- [ ] Achievement system
+- [ ] Custom avatar creation
+- [ ] Tournament mode
+- [ ] Social sharing
+- [ ] Analytics and statistics
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+## 🤝 Contributing
 
-```sh
-bundle install
-```
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
 
-Then, and every time you update your native dependencies, run:
+## 📄 License
 
-```sh
-bundle exec pod install
-```
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+## 🙏 Acknowledgments
 
-```sh
-# Using npm
-npm run ios
+- React Native community
+- Game design inspiration from classic party games
+- Frankenstein theme and concept
 
-# OR using Yarn
-yarn ios
-```
+## 📞 Support
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+If you encounter any issues or have questions:
+1. Check the troubleshooting section
+2. Review the code comments
+3. Open an issue on GitHub
+4. Contact the development team
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+---
 
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+**Remember**: Add your background image to make the app fully functional! 🖼️✨
