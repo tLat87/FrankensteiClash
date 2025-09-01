@@ -49,5 +49,38 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSCameraUsageDescription</key>
+	<string>This app needs access to the camera to take photos or videos.</string>
+
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This app needs access to your photo library to select images.</string>
+
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>This app needs permission to save images to your photo library.</string>
+
+	<key>NSMicrophoneUsageDescription</key>
+	<string>This app needs access to the microphone for recording and audio playback.</string>
+
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This app needs your location to display maps and nearby content.</string>
+
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This app uses your location to provide personalized experiences.</string>
+
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This app needs continuous access to your location for full functionality.</string>
+
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>This app may use Bluetooth to connect with nearby devices.</string>
+
+	<key>NSCalendarsUsageDescription</key>
+	<string>This app may need access to your calendar for scheduling events.</string>
+
+	<key>NSContactsUsageDescription</key>
+	<string>This app may need access to your contacts to share content easily.</string>
+
+	<key>NSMotionUsageDescription</key>
+	<string>This app may use motion data to improve user experience.</string>
+
 </dict>
 </plist>
